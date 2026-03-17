@@ -43,6 +43,10 @@ The project includes examples of:
 - BETWEEN
 - IN
 - NULL / NOT NULL filtering
+- UPDATE and DELETE operations
+- Aggregate functions (SUM, AVG, MIN, MAX)
+- GROUP BY analysis
+- OrderDetails table for quantity analysis
 
 ## Example Queries
 
