@@ -1,58 +1,138 @@
-# MySQL SQL Practice Project
+# 📊 SQL Sales Analysis Project
 
-This project contains basic SQL exercises created while learning MySQL and database fundamentals.
+This repository includes SQL queries and data analysis exercises created while learning MySQL and database fundamentals.
 
-## Database
-ornek1
+---
 
-## Tables
+## 🚀 Project Overview
+
+In this project, I practiced SQL by working on a sample sales database and performing real-world data operations.
+
+Key focus areas:
+
+* Data manipulation (INSERT, UPDATE, DELETE)
+* Data filtering and querying
+* Data aggregation and analysis
+* Preparing datasets for reporting
+
+---
+
+## 🗄️ Database
+
+**ornek1**
+
+---
+
+## 📁 Tables
 
 ### Customers
-Stores customer information such as:
-- Customer Name
-- Contact Name
-- Address
-- City
-- Postal Code
-- Country
+
+Stores customer-related information:
+
+* CustomerID
+* CustomerName
+* ContactName
+* Address
+* City
+* PostalCode
+* Country
 
 ### Products
-Stores product information such as:
-- Product Name
-- Supplier ID
-- Category ID
-- Unit
-- Price
 
-## SQL Topics Practiced
+Stores product-related information:
 
-The project includes examples of:
+* ProductID
+* ProductName
+* SupplierID
+* CategoryID
+* Unit
+* Price
 
-- CREATE DATABASE
-- CREATE TABLE
-- INSERT INTO
-- ALTER TABLE
-- SELECT
-- DISTINCT
-- WHERE
-- ORDER BY
-- COUNT
-- LIKE
-- AND / OR
-- NOT
-- BETWEEN
-- IN
-- NULL / NOT NULL filtering
-- UPDATE and DELETE operations
-- Aggregate functions (SUM, AVG, MIN, MAX)
-- GROUP BY analysis
-- OrderDetails table for quantity analysis
+### OrderDetails
 
-## Example Queries
+Stores order transaction data:
 
-Select customers from Mexico:
+* OrderDetailID
+* OrderID
+* ProductID
+* Quantity
+
+---
+
+## 🧠 SQL Topics Covered
+
+### 🔹 Core SQL
+
+* CREATE DATABASE / TABLE
+* INSERT INTO
+* ALTER TABLE
+* UPDATE / DELETE
+* SELECT / DISTINCT
+
+### 🔹 Filtering & Conditions
+
+* WHERE
+* LIKE (pattern matching)
+* IN / NOT IN
+* BETWEEN
+* AND / OR / NOT
+
+### 🔹 Data Analysis
+
+* COUNT()
+* SUM()
+* AVG()
+* MIN() / MAX()
+* GROUP BY
+
+### 🔹 String Functions
+
+* CONCAT()
+
+---
+
+## 📊 Example Queries
+
+### Customers from Mexico
 
 ```sql
 SELECT *
 FROM customers
 WHERE country = 'Mexico';
+```
+
+### Total quantity per order
+
+```sql
+SELECT OrderID, SUM(Quantity) AS TotalQuantity
+FROM OrderDetails
+GROUP BY OrderID;
+```
+
+### Average product price
+
+```sql
+SELECT AVG(Price) AS AveragePrice
+FROM Products;
+```
+
+---
+
+## 🎯 Purpose
+
+The goal of this project is to build a strong SQL foundation and transition into a **Data Analyst role** by applying data querying and analysis techniques.
+
+---
+
+## 🔜 Next Steps
+
+* JOIN queries (multi-table analysis)
+* Subqueries
+* Advanced filtering techniques
+* Power BI dashboard integration
+
+---
+
+## 👨‍💻 Author
+
+**Emre Erol**
